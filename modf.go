@@ -12,7 +12,7 @@ import "math"
 // Special cases are:
 //	Modf(±Inf) = ±Inf, NaN
 //	Modf(NaN) = NaN, NaN
-func Modf(f float32) (z float64, frac float32) {
-	z64, frac64 := math.Modf(float64(f))
-	return z64, float32(frac64)
+func Modf(f float32) (i float32, frac float32) {
+	i64, frac64 := math.Modf(float64(f))
+	return float32(i64), float32(frac64)
 }

@@ -26,15 +26,3 @@ func IsNaN(f float32) (is bool) {
 func IsInf(f float32, sign int) bool {
 	return math.IsInf(float64(f), sign)
 }
-
-/*
-// normalize returns a normal number y and exponent exp
-// satisfying x == y × 2**exp. It assumes x is finite and non-zero.
-func normalize(x float32) (y float32, exp int) {
-	const SmallestNormal = 2.2250738585072014e-308 // 2**-1022
-	if Abs(x) < SmallestNormal {
-		return x * (1 << 52), -52
-	}
-	return x, 0
-}
-*/
